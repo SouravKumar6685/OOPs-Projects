@@ -1,0 +1,45 @@
+
+---
+
+# Expense Tracker
+
+The Expense Tracker project is designed to apply Object-Oriented Programming (OOP) concepts in Python. It enables users to track their expenses efficiently by adding, categorizing, and managing them through an intuitive interface.
+
+## Key Features
+
+- **Add Expense**: Record an expense with categories like "Food," "Transport," etc.
+- **View Expenses**: Display a list of all expenses or filter them by specific categories or dates.
+- **Delete Expense**: Remove incorrect or outdated entries from the expense list.
+- **Categorize Expenses**: Group expenses based on predefined categories.
+- **Total Spending**: Calculate the total spending over a specific period or within a category.
+- **Reports**: Generate summary reports based on daily, monthly, or category-wise expenses.
+
+## OOP Structure
+
+### Class: `Expense`
+
+- **Attributes**: `amount` , `category` , `date` , `description`
+  
+- **Methods**:
+  - `get_details()`: Returns the details of the expense.
+  - `edit_expense()`: Allows editing the attributes of the expense.
+
+### Class: `ExpenseTracker`
+
+- **Attributes**: `expenses`.
+  
+- **Methods**:
+  - `add_expense()`: Adds an `Expense` object to the tracker.
+  - `view_expenses()`: Views all or filtered expenses by category.
+  - `delete_expense()`: Deletes an expense from the list by its index.
+  - `get_total_spending()`: Calculates the total spending over a period or within a category.
+  - `generate_report()`: Generates a summary report of expenses by category.
+
+## Step-by-Step Implementation
+
+1. **Create the `Expense` class** with attributes like `amount`, `category`, `date`, and `description`.
+2. **Create the `ExpenseTracker` class** to manage expenses, with methods for adding, viewing, and deleting them.
+3. **Implement methods** to calculate total spending and generate reports.
+4. Optionally, **include file handling** to store and load expenses for future use.
+
+---

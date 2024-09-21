@@ -1,0 +1,55 @@
+
+---
+
+# Banking System Project
+
+This project is designed to demonstrate key Object-Oriented Programming (OOP) concepts through a simple banking system. The system supports two types of accounts—Savings and Current—and includes various operations like deposit, withdrawal, and balance checks.
+
+## Class Structure
+
+### 1. **BankAccount** (Base Class)
+Represents the foundation for both types of bank accounts.
+
+- **Attributes**: `account_number` , `account_holder` , `balance`
+
+- **Methods**:
+  - `deposit(amount)`: Adds a specified amount to the balance.
+  - `withdraw(amount)`: Deducts a specified amount from the balance.
+  - `check_balance()`: Returns the current balance.
+  - `display_account_details()`: Displays account information.
+
+### 2. **SavingsAccount** (Inherits from `BankAccount`)
+Specialized class for savings accounts.
+
+ **Additional Attributes**: `interest_rate`
+
+- **Methods**:
+  - `apply_interest()`: Calculates and applies interest to the balance.
+
+### 3. **CurrentAccount** (Inherits from `BankAccount`)
+Specialized class for current accounts.
+
+- **Additional Attributes**: `overdraft_limit`
+
+- **Methods**:
+  - `withdraw(amount)`: Overrides the base method to consider overdraft limits.
+
+### 4. **Bank**
+Manages a collection of accounts and facilitates account operations.
+
+- **Attributes**: `accounts_list`
+
+- **Methods**:
+  - `create_account(account_type, account_holder, initial_deposit)`: Creates a new Savings or Current account.
+  - `find_account(account_number)`: Finds and returns an account by its number.
+  - `display_all_accounts()`: Displays details of all accounts in the bank.
+
+## Features
+- Creation of both Savings and Current accounts.
+- Deposit and withdrawal functionality.
+- Balance check and account details display.
+- Interest application for Savings accounts.
+- Overdraft limit management for Current accounts.
+
+---
+

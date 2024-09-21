@@ -1,0 +1,60 @@
+
+### E-commerce Shopping App
+
+This project demonstrates the core fundamentals of Object-Oriented Programming (OOP) by implementing an E-commerce shopping application. Below are the major OOP concepts utilized in this project:
+
+- **Inheritance**
+- **Encapsulation**
+
+---
+
+### High-Level Design Overview
+
+The structure of the app is centered around several key classes, each with attributes and methods that encapsulate specific functionalities.
+
+---
+
+#### Key Classes:
+
+1. **Product**
+
+   - **Attributes**: `name`, `price`, `category`, `stock_quantity`, `description`
+   - **Methods**: 
+     - `update_stock()`: Updates the available stock of the product.
+     - `apply_discount()`: Applies a discount to the product's price.
+     - `display_details()`: Displays the product's details.
+
+2. **Cart**
+
+   - **Attributes**: 
+     - `items` (list): A list of products added to the cart.
+     - `total_price`: The total price of the items in the cart.
+   - **Methods**:
+     - `add_to_cart()`: Adds a product to the cart.
+     - `remove_from_cart()`: Removes a product from the cart.
+     - `calculate_total()`: Calculates the total price of the items in the cart.
+     - `checkout()`: Processes the checkout and clears the cart.
+
+3. **User**
+
+   - **Attributes**: `username`, `email`, `password`, `address`
+   - **Methods**:
+     - `login()`: Authenticates the user.
+     - `logout()`: Logs the user out.
+     - `view_profile()`: Displays the user’s profile information.
+
+4. **Customer** (inherits from `User`)
+
+   - **Attributes**: `cart`, `order_history`
+   - **Methods**:
+     - `place_order()`: Places an order for the items in the cart.
+     - `view_order_history()`: Displays the customer’s past orders.
+
+5. **Admin** (inherits from `User`)
+
+   - **Methods**:
+     - `add_product()`: Adds a new product to the inventory.
+     - `remove_product()`: Removes a product from the inventory.
+     - `update_product()`: Updates details of an existing product.
+     - `update_order_status()`: Updates the status of customer orders.
+

@@ -1,0 +1,74 @@
+
+---
+
+# Hotel Booking System - OOP in Python
+
+This project implements a **Hotel Booking System** using Object-Oriented Programming (OOP) principles in Python. The system manages hotel room bookings, customer information, payments, and additional services, with clean separation of responsibilities across different classes.
+
+## Core Classes Overview
+
+1. **Hotel**  
+   The `Hotel` class manages the overall hotel operations, including room availability, booking records, and services.
+   
+2. **Room**  
+   The `Room` class represents different types of rooms available in the hotel, such as Single, Double, and Suite. It handles room pricing and availability.
+
+3. **Customer**  
+   The `Customer` class stores customer details like name, phone number, and their booking history.
+
+4. **Booking**  
+   The `Booking` class manages individual bookings, including check-in and check-out dates, assigned rooms, and customer information.
+
+5. **Payment**  
+   The `Payment` class handles the financial transactions associated with bookings.
+
+6. **Service**  
+   The `Service` class represents any additional services (e.g., room service, laundry) that a customer can add to their booking.
+
+---
+
+## System Design
+
+### 1. Hotel Class
+**Attributes:** `hotel_name` , `rooms` , `bookings`
+
+**Methods:**
+- `add_room(room)`: Adds a `Room` object to the hotel.
+- `get_available_rooms()`: Returns a list of available rooms.
+- `make_booking(customer, room, check_in, check_out)`: Creates a booking for a customer, assigning a room and managing the booking process.
+
+### 2. Room Class
+**Attributes:** `room_number`,  `room_type`, `price_per_night` , `is_available`
+
+**Methods:**
+- `mark_available()`: Marks the room as available.
+- `mark_unavailable()`: Marks the room as unavailable.
+
+### 3. Customer Class
+**Attributes:** `name` ,  `phone_number` , `booking_history`
+
+**Methods:**
+- `make_payment(amount)`: Handles payment processing for the customer.
+
+### 4. Booking Class
+**Attributes:** `customer` ,  `room` ,  `check_in_date` ,  `check_out_date` ,  `total_price`
+
+**Methods:**
+- `calculate_total_price()`: Calculates the total price based on the duration of the stay and services.
+- `confirm_booking()`: Confirms the booking and updates the customer’s booking history.
+
+### 5. Payment Class
+**Attributes:** `amount` ,  `payment_method`
+
+**Methods:**
+- `process_payment()`: Processes the payment for the booking.
+
+---
+
+## Features
+- Room booking with check-in/check-out management.
+- Discount handling for long stays.
+- Addition of extra services like room service and laundry.
+- Payment processing and tracking.
+
+---
